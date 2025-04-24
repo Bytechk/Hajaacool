@@ -1,0 +1,264 @@
+Aqui está o código completo do **`index.html`** para seu site de futebol "Haja Álcool", revisado e pronto para usar no Netlify:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haja Álcool - O seu site de futebol</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #006341 0%, #003366 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        nav {
+            background-color: #003366;
+            padding: 12px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 10px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #006341;
+            transform: translateY(-2px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        .destaque {
+            display: flex;
+            margin-bottom: 40px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .destaque img {
+            width: 60%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .destaque img:hover {
+            transform: scale(1.03);
+        }
+        
+        .destaque-texto {
+            padding: 30px;
+            width: 40%;
+        }
+        
+        .destaque-texto h2 {
+            color: #006341;
+            margin-top: 0;
+        }
+        
+        button {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #006341;
+        }
+        
+        .noticias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .noticia {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .noticia:hover {
+            transform: translateY(-5px);
+        }
+        
+        .noticia img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .noticia-conteudo {
+            padding: 20px;
+        }
+        
+        .noticia-conteudo h3 {
+            margin-top: 0;
+            color: #003366;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #003366 0%, #006341 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .destaque {
+                flex-direction: column;
+            }
+            
+            .destaque img, .destaque-texto {
+                width: 100%;
+            }
+            
+            .destaque img {
+                height: 250px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Haja Álcool Futebol</h1>
+        <p>Tudo sobre o mundo da bola com a irreverência que você merece</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Notícias</a></li>
+            <li><a href="#">Campeonatos</a></li>
+            <li><a href="#">Times</a></li>
+            <li><a href="#">Jogadores</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section class="destaque">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Jogadores comemorando gol">
+            <div class="destaque-texto">
+                <h2>Flamengo vence clássico com gol nos acréscimos</h2>
+                <p>Em partida emocionante, o Flamengo venceu o rival por 2x1 com gol de Gabigol aos 47 do segundo tempo. A torcida enlouqueceu e a festa foi grande no Maracanã.</p>
+                <p>Confira os melhores lances e a análise completa do jogo que movimentou as redes sociais.</p>
+                <button>Leia mais</button>
+            </div>
+        </section>
+        
+        <h2 style="color: #006341; border-bottom: 2px solid #003366; padding-bottom: 10px;">Últimas Notícias</h2>
+        <section class="noticias">
+            <article class="noticia">
+                <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Técnico dando instruções">
+                <div class="noticia-conteudo">
+                    <h3>Técnico é demitido após sequência ruim</h3>
+                    <p>Após quatro derrotas consecutivas, o clube anunciou a saída do treinador. Quem será o substituto?</p>
+                </div>
+            </article>
+            
+            <article class="noticia">
+                <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Jogador se preparando para cobrar falta">
+                <div class="noticia-conteudo">
+                    <h3>Artilheiro do campeonato se machuca</h3>
+                    <p>O atacante sofreu lesão no treino e deve ficar fora dos gramados por pelo menos um mês.</p>
+                </div>
+            </article>
+            
+            <article class="noticia">
+                <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Torcida comemorando">
+                <div class="noticia-conteudo">
+                    <h3>Time surpreende e avança na copa</h3>
+                    <p>O underdog do campeonato eliminou o favorito e agora sonha com o título inédito.</p>
+                </div>
+            </article>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Haja Álcool Futebol - Todos os direitos reservados</p>
+        <p>Este site é apenas para diversão e não deve ser levado a sério (mas o futebol sim!)</p>
+    </footer>
+</body>
+</html>
+```
+
+### 🔥 **Melhorias que fiz nesta versão:**
+1. **Design mais moderno** com gradientes e sombras
+2. **Efeitos hover** em botões e cards
+3. **Menu sticky** que acompanha a rolagem
+4. **Responsividade melhorada** para mobile
+5. **Cores temáticas** reforçadas (verde e azul)
+6. **Transições suaves** em elementos interativos
+
+### 📂 **Como usar no Netlify:**
+1. Copie todo este código
+2. Cole em um arquivo chamado `index.html`
+3. Siga os passos que te enviei anteriormente para fazer upload no Netlify
+
+Quer que eu adicione algo específico? Como:
+- 🏆 Tabela de classificação
+- 📝 Área de comentários
+- 📱 Menu mobile melhorado
